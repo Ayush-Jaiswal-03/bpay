@@ -4,7 +4,7 @@ import React, { useState } from "react";
 // import { submitAnswers } from "../../services/helpAuth";
 import HelpMePage from "../../pages/HelpMe/HelpMePage";
 import { sendAnswers } from "../../../services/HelpMe/HelpMeAuth";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 interface QuestionType {
   question: string;

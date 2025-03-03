@@ -30,7 +30,7 @@ export const withdrawGold = async (amount: number) => {
       method: "Post",
       mode: "cors",
       headers: {
-        "Content-Type": "applications/json",
+        "Content-Type": "application/json",
         jwt_token: token ? token : "",
       },
       body: JSON.stringify(amount),

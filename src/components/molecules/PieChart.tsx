@@ -40,7 +40,7 @@ const PieChart: React.FC<PieChartProps> = ({ pieData }) => {
   });
 
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  // const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (pieData) {
@@ -59,7 +59,7 @@ const PieChart: React.FC<PieChartProps> = ({ pieData }) => {
   }, [pieData]);
 
   if (loading) return <div>Loading...</div>;
-  if (error) return <div>{error}</div>;
+  // if (error) return <div>{error}</div>;
 
   const options = {
     responsive: true,

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import BharatPeLogo from "../../../assets/invest-bharatpe-logo.png";
 
 const LoginPage: React.FC = () => {
-  const [phoneData, setPhoneData] = useState("");
+  // const [phoneData, setPhoneData] = useState("");
   const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
 
@@ -21,7 +21,7 @@ const LoginPage: React.FC = () => {
 
     try {
       const data = await sendPhoneNumber(phone);
-      setPhoneData(phone);
+      // setPhoneData(phone);
 
       console.log("OTP", data.otp_code);
 

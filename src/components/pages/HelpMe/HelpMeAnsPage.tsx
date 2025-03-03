@@ -25,7 +25,7 @@ const HelpMeAnsPage: React.FC<HelpMePageProps> = ({ data }) => {
   return (
     <div className="w-full h-auto">
       <div className="flex flex-col justify-center items-center p-4 space-y-6 gap-10">
-        <div className="flex justify-center items-center bg-blue-900 text-xl font-bold h-12 w-full rounded-2xl">
+        <div className="flex justify-center items-center bg-blue-900 text-xl font-bold h-12 w-full rounded-2xl mt-8.5">
           <h1 className="text-white font-bold text-xl flex flex-col justify-between items-center p-4 space-y-6">
             Your Personalized Investment Strategy
           </h1>

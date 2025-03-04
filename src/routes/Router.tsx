@@ -21,10 +21,10 @@ import History from "../components/container/Profile/History";
 
 const Router = () => {
   const location = useLocation();
-  const hide = ["/", "/otp", "/helpmeans"];
+  const hide = ["/", "/otp", "/helpmeans", "/helpme"];
   const show = !hide.includes(location.pathname);
   return (
-    <div>
+    <div className="">
       <BackButton />
       <Routes>
         <Route path="/" element={<LoginPage />} />
@@ -47,7 +47,6 @@ const Router = () => {
         <Route path="/helpme" element={<HelpMe />} />
 
         <Route path="/profile" element={<Profile />} />
-        {/* <Route path="/history" element={<History/>} /> */}
         <Route path="/history" element={<History />} />
         <Route path="/myaccount" element={<MyAccountPage />} />
         <Route path="/profile" element={<Profile />} />

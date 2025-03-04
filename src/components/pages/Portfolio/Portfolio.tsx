@@ -30,7 +30,7 @@ const Portfolio: React.FC<PortfolioPageProps> = ({ data }) => {
   ];
 
   return (
-    <div className="relative w-full min-h-screen bg-gradient-to-br from-blue-100 to-blue-300 text-gray-800 flex flex-col justify-center items-center p-6 pt-16 md:pt-10 md:rounded-3xl">
+    <div className="relative w-full min-h-screen bg-gradient-to-br from-blue-100 to-blue-300 text-gray-800 flex flex-col justify-center items-center p-6 pt-16 md:pt-10 md:rounded-3xl pb-20">
       <h1 className="text-3xl font-bold mb-5">Investment Portfolio</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">

@@ -36,7 +36,7 @@ const HistoryPage: React.FC<HistoryPageProps> = ({ historyData }) => {
               <div className="text-right">
                 <p className="font-medium">{item.operation}</p>
                 <p className="text-sm text-gray-700">
-                  ${item.amount.toFixed(2)}
+                  Rs {item.amount.toFixed(2)}
                 </p>
               </div>
             </div>

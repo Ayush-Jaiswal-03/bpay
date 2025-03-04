@@ -20,8 +20,10 @@ const PortfolioCard: React.FC<{
   totalValue: number;
   investHandler: () => void;
 }> = ({ stats, totalValue, investHandler }) => {
+  const navigate = useNavigate();
+
   return (
-    <div className="fixed top-0 left-0 w-full h-screen bg-gradient-to-br from-blue-100 to-blue-300 flex flex-col justify-center items-center text-gray-800 md:rounded-3xl">
+    <div className="top-0 left-0 w-full h-screen bg-gradient-to-br from-blue-100 to-blue-300 flex flex-col justify-center items-center text-gray-800 md:rounded-3xl">
       {/* Total Portfolio Value */}
       <div className="text-center">
         <h2 className="text-3xl font-semibold">Total Portfolio Value</h2>
@@ -59,7 +61,7 @@ const PortfolioCard: React.FC<{
       {/* Help Button */}
       <div className="mt-6">
         <button
-          onClick={() => (window.location.href = "/helpme")}
+          onClick={() => navigate("/helpme")}
           className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-large rounded-lg text-md px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
         >
           Help Me Invest
@@ -94,7 +96,7 @@ const HomePage: React.FC<HomePageProps> = ({ data }) => {
   };
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-gray-200">
+    <div className="flex flex-col items-center min-h-screen bg-gray-200 pb-20">
       <PortfolioCard
         stats={stats}
         totalValue={total_value}

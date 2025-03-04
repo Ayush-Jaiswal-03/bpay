@@ -28,7 +28,7 @@ const InvestPage: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="fixed top-0 left-0 w-full h-screen bg-gradient-to-br from-blue-100 to-blue-300 flex flex-col justify-center items-center text-gray-800 md:rounded-3xl">
+    <div className="top-0 left-0 w-full min-h-screen bg-gradient-to-br from-blue-100 to-blue-300 flex flex-col justify-center items-center text-gray-800 md:rounded-3xl pb-30">
       {/* Container */}
       <div className="w-full max-w-4xl px-6">
         {/* Header */}

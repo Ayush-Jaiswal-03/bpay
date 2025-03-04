@@ -23,20 +23,20 @@ const BankCard: React.FC<BankCardProps> = ({ bankName, returns }) => {
 };
 
 const banks = [
-  { id: "bank1", name: "State Bank of India", returns: "6.5%" },
+  { id: "bank1", name: "State Bank of India", returns: "7%" },
   { id: "bank2", name: "HDFC Bank", returns: "6.75%" },
-  { id: "bank3", name: "ICICI Bank", returns: "6.6%" },
-  { id: "bank4", name: "Axis Bank", returns: "6.8%" },
+  { id: "bank3", name: "ICICI Bank", returns: "6.8%" },
+  { id: "bank4", name: "Axis Bank", returns: "6.6%" },
 ];
 
 const BankList: React.FC = () => {
   return (
     <div className="relative min-h-screen w-full">
       {/* Full-screen gradient background */}
-      <div className="fixed inset-0 bg-gradient-to-br from-blue-100 to-blue-300"></div>
+      <div className="bg-gradient-to-br from-blue-100 to-blue-300"></div>
 
       {/* Content Wrapper */}
-      <div className="relative flex justify-center items-center min-h-screen w-full">
+      <div className="bg-gradient-to-br from-blue-100 to-blue-300 relative flex justify-center items-center min-h-screen w-full mb-20">
         <div className="w-full max-w-6xl px-4 py-8">
           <h1 className="text-2xl sm:text-3xl font-bold mb-6 text-center">
             Invest in Fixed Deposits

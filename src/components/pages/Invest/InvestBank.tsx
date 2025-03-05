@@ -1,22 +1,28 @@
+//
 import { useState } from "react";
 import { investBank, withdrawBank } from "../../../services/Invest";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
+
+const INTEREST_RATE = 0.07; // 7% annual interest
+
+const calculateMaturityValue = (principal: any, years: any) => {
+  return (principal * Math.pow(1 + INTEREST_RATE, years)).toFixed(2);
+};
 
 const InvestBank = () => {
-  //   const goldPricePerGram = 9000; // Fixed
   const [amount, setAmount] = useState("");
   const navigate = useNavigate();
 
   const investHandler = async () => {
-    // console.log("Investing...");
     const data = await investBank(parseInt(amount));
 
     if (data) {
-      alert("Investment successful");
+      toast.success("Investment Successful");
       setAmount("0");
       navigate("/home");
     } else {
-      alert("Investment failed");
+      toast.error("Investment Failed");
       setAmount("0");
     }
   };
@@ -29,7 +35,7 @@ const InvestBank = () => {
       setAmount("0");
       navigate("/home");
     } else {
-      alert("Withdraw Successful");
+      alert("Withdraw Failed");
       setAmount("0");
     }
   };
@@ -49,6 +55,21 @@ const InvestBank = () => {
           className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           placeholder="Enter amount"
         />
+
+        {amount && parseFloat(amount) > 0 && (
+          <div className="mt-4 p-3 bg-white rounded-md shadow">
+            <h3 className="text-sm font-semibold">Maturity Values:</h3>
+            <p className="text-sm">
+              1 Year: ₹{calculateMaturityValue(amount, 1)}
+            </p>
+            <p className="text-sm">
+              3 Years: ₹{calculateMaturityValue(amount, 3)}
+            </p>
+            <p className="text-sm">
+              5 Years: ₹{calculateMaturityValue(amount, 5)}
+            </p>
+          </div>
+        )}
 
         <button
           onClick={investHandler}

@@ -18,6 +18,7 @@ import MyAccountPage from "../components/pages/Profile/MyAccountPage";
 import HelpMe from "../components/container/HelpMe/HelpMe";
 import HelpMeAns from "../components/container/HelpMe/HelpMeAns";
 import History from "../components/container/Profile/History";
+import { Toaster } from "react-hot-toast";
 
 const Router = () => {
   const location = useLocation();
@@ -53,6 +54,7 @@ const Router = () => {
 
         <Route path="/helpmeans" element={<HelpMeAns />} />
       </Routes>
+      <Toaster position="top-center" />
       {show && <BottomTabs />}
     </div>
   );

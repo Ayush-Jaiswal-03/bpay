@@ -25,13 +25,13 @@ const HelpMePage: React.FC<Props> = ({
   isSelected,
 }) => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-[#0575E6] to-[#021B79] relative">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-[#00A6E3] to-[#0076B9] relative">
       <div className="flex flex-col gap-6 justify-between max-w-lg w-full h-full p-6 sm:px-4 md:px-6">
         <div className="flex justify-center items-center">
           <img
             src={BharatPeLogo}
             alt="BP Logo"
-            className="mb-4 w-32 h-auto sm:w-28 md:w-36"
+            className="mb-4 w-32 h-auto sm:w-30 md:w-36 animate-pulse-scale"
           />
         </div>
         <div className="flex items-center justify-center text-2xl sm:text-xl md:text-2xl font-semibold text-white mb-4 rounded-3xl">
@@ -56,9 +56,9 @@ const HelpMePage: React.FC<Props> = ({
           <button
             onClick={onPrevious}
             disabled={currentQuestion === 0}
-            className="text-white text-xl p-2 rounded bg-blue-600 hover:bg-blue-700 transition-all duration-300 disabled:opacity-50"
+            className="text-white text-xl p-2 rounded bg-gray-500 hover:bg-blue-700 transition-all duration-300 mt-4 sm:mt-0  disabled:opacity-50"
           >
-            Previous
+            Prev
           </button>
           {currentQuestion === totalQuestions - 1 ? (
             <button
@@ -71,7 +71,7 @@ const HelpMePage: React.FC<Props> = ({
             <button
               onClick={onNext}
               disabled={!isSelected}
-              className={`text-white p-2 text-xl rounded bg-blue-600 hover:bg-blue-700 transition-all duration-300 mt-4 sm:mt-0 ${
+              className={`text-white p-2 text-xl rounded bg-blue-900 hover:bg-blue-700 transition-all duration-300 mt-4 sm:mt-0 ${
                 !isSelected ? "opacity-50 cursor-not-allowed" : ""
               }`}
             >

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { investGold, withdrawGold } from "../../../services/Invest";
 import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const InvestGold = () => {
   const goldPricePerGram = 9000; // Fixed
@@ -12,11 +13,13 @@ const InvestGold = () => {
     const data = await investGold(parseInt(amount));
 
     if (data) {
-      alert("Investment successful");
+      // alert("Investment successful");
+      toast.success("Investment Successful");
       setAmount("0");
       navigate("/home");
     } else {
-      alert("Investment failed");
+      // alert("Investment failed");
+      toast.error("Investment failed");
       setAmount("0");
     }
   };
@@ -25,11 +28,11 @@ const InvestGold = () => {
     const data = await withdrawGold(parseInt(amount));
 
     if (data) {
-      alert("Withdraw Successful");
+      toast.success("Withdraw Successful");
       setAmount("0");
       navigate("/home");
     } else {
-      alert("Withdraw failed");
+      toast.error("Withdraw Failed");
       setAmount("0");
     }
   };
